@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        
+        .box1{
+            width: 100vw;
+            height: 70vh;
+            color: #ffffff00;
+            position: absolute;
+            top: 20vh;
+        }
+        .box2{
+            width: 20vw;
+            height: 55vh;
+            border-radius: 15px;
+            background-color: rgb(50, 50, 50);
+            color:#ffffff;
+            transition: 0.3s;
+        }
+        #boxx{
+            display:flex;
+            flex-direction: row;
+            justify-content:space-evenly;
+        }
+        @media (max-width: 1000px){
+            #boxx{
+                flex-direction: column;
+                justify-content: space-around;
+                gap:5vh;
+                margin-left: 30vw;
+            }
+            .box2{
+                width: 40vw;
+            }
+        }
+        .box2:hover{
+            transform: scale(1.22);
+            background-color: rgb(71, 71, 71);
+        }
+.merriweather-sans{
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+}
+.merriweather-sans2{
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
+}
+    </style>
+</head>
+<body style="background-color: black; line-height: 1.75vh;">
+    <div style='position: absolute; left: 0;' class="box1" id="boxx">
+        <div class="box2">
+            <h5 style="margin-left:1.75vw; font-size: 1vw;" class="merriweather-sans">PREMIUM</h5>
+            <h2 style='margin-left: 1.75vw; color:lightpink; font-size: 2.25vw;' class="merriweather-sans2">INDIVIDUAL</h2>
+            <p style="margin-left:1.75vw; color: #ffffff; font-size: 1.02vw;" class="merriweather-sans">₹119 for 2 months</p>
+            <p style="margin-left:1.75vw; color: #b9b9b9; font-size: 1.02vw;" class="merriweather-sans">₹119/ month after</p>
+            <p style="text-align: center; font-size: 1.02vw;">_________________________________</p>
+            <ul style="line-height: 3.5vh; font-size: 1.02vw;" class="merriweather-sans">
+                <li>1 premium account</li>
+                <li>Cancel anytime</li>
+                <li>Subscribe or one-time payment</li>
+            </ul>
+            <div style="margin-left: 2.5vw;height: 5vh; width: 15vw; border-radius: 5vw; background-color: lightpink;margin-top: 7.5vh; margin-bottom: 5vh">
+                <p style="color:black; text-align:center; font-size: 1.02vw; padding-top: 1.5vh;" class="merriweather-sans">Get Premium Individual</p>
+            </div>
+        </div>
+        <div class="box2">
+            <h5 style="margin-left:1.75vw; font-size: 1vw" class="merriweather-sans">PREMIUM</h5>
+            <h2 style='margin-left: 1.75vw; color:rgb(144, 228, 66); font-size: 2.25vw;' class="merriweather-sans2">MINI</h2>
+            <p style="margin-left:1.75vw; color: #ffffff; font-size: 1.02vw;" class="merriweather-sans">₹7 for 1 day</p>
+            <p style="margin-left:1.75vw; color: #ffffff; font-size: 1.02vw;" class="merriweather-sans">₹25 for one week</p>
+            <p style="text-align: center; font-size: 1.02vw;">_________________________________</p>
+            <ul style="line-height: 2.7vh; font-size: 1.02vw;" class="merriweather-sans">
+                <li>1 mobile-only premium account</li>
+                <li>Offline listening of up to 30 songs on 1 device</li>
+                <li>One-time payment</li>
+                <li>Basic audio quality</li>
+            </ul>
+            <div style="margin-left: 2.5vw;height: 5vh; width: 15vw; border-radius: 5vw; background-color: rgb(144, 228, 66); margin-top: 5vh; margin-bottom: 5vh">
+                <h4 style="color:black; text-align:center; font-size: 1.02vw; padding-top: 1.5vh;" class="merriweather-sans">Get Premium Mini</h4>
+            </div>
+        </div>
+        <div class="box2"><h5 style="margin-left:1.75vw; font-size: 1vw" class="merriweather-sans">PREMIUM</h5>
+            <h2 style='margin-left: 1.75vw; color:rgb(175, 120, 234) ;font-size: 2.25vw;' class="merriweather-sans2">STUDENT</h2>
+            <p style="margin-left:1.75vw; color: #ffffff; font-size: 1.02vw;" class="merriweather-sans">₹59 for 2 months</p>
+            <p style="margin-left:1.75vw; color: #b9b9b9; font-size: 1.02vw;" class="merriweather-sans">₹59/ month after</p>
+            <p style="text-align: center; font-size: 1.02vw;">_________________________________</p>
+            <ul style="line-height: 3.5vh; font-size: 1.02vw;" class="merriweather-sans">
+                <li>1 verified premium account</li>
+                <li>Discount for eligible students</li>
+                <li>Cancel anytime</li>
+            </ul>
+            <div style="margin-left : 2.5vw; height: 5vh; width: 15vw; border-radius: 5vw; background-color: rgb(175, 120, 234); margin-top: 7.5vh; margin-bottom: 5vh;">
+                <p style="color:black; text-align:center; font-size: 1.02vw; padding-top: 1.5vh;" class="merriweather-sans">Get Premium Student</p>
+            </div>
+        </div>
+        <div class="box2"><h5 style="margin-left:1.75vw; font-size: 1vw" class="merriweather-sans">PREMIUM</h5>
+            <h2 style='margin-left: 1.75vw; color:rgb(245, 215, 44); font-size: 2.25vw;' class="merriweather-sans2">DUO</h2>
+            <p style="margin-left:1.75vw; color: #ffffff; font-size: 1.02vw;" class="merriweather-sans">₹149 for 2 months</p>
+            <p style="margin-left:1.75vw; color: #b9b9b9; font-size: 1.02vw;" class="merriweather-sans">₹149/ month after</p>
+            <p style="text-align: center; font-size: 1.02vw;">_________________________________</p>
+            <ul style="line-height: 3.5vh; font-size: 1.02vw;" class="merriweather-sans">
+                <li>2 premium accounts</li>
+                <li>Cancel anytime</li>
+                <li>Subscribe or one-time payment</li>
+            </ul>
+            <div style="margin-left: 2.5vw;height: 5vh; width: 15vw; border-radius: 5vw; background-color: rgb(245, 215, 44); margin-top: 7.5vh; margin-bottom: 5vh">
+                <p style="color:black; text-align:center; font-size: 1.02vw; padding-top: 1.5vh;" class="merriweather-sans">Get Premium Duo</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
