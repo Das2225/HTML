@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,300&display=swap" rel="stylesheet">
+    <style>
+        .playwrite-au-vic {
+          font-family: "Playwrite AU VIC", cursive;
+          font-optical-sizing: auto;
+          font-weight: 225;
+          font-style: normal;
+        }
+        .dm-sans {
+          font-family: "DM Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 300;
+          font-style: italic;
+        }
+        .loc-cell{
+          width: 15vw;
+          height: 7vh;
+          position: absolute; 
+          top: 15vh;
+          background-color:rgb(166, 165, 180);
+          padding-top: 5px;
+          border-radius: 20px;
+        }
+        .cell{
+            display: grid;
+            grid-template-columns: 250px 250px 250px 250px;
+            grid-template-rows: 250px 250px 250px 250px;
+            position: absolute;
+            top: 25vh;
+            gap: 10px;
+        }
+        .cell2{
+            display: grid;
+            grid-template-columns: 450px;
+            grid-template-rows: 120px 120px 120px 120px;
+            position: absolute;
+            top: 25vh;
+            gap: 10px;
+            left: 1060px;
+          }
+        .bigcell{
+          grid-row: span 2;
+          grid-column: span 2;
+        }
+        .weathbox{
+          background-color:rgb(166, 165, 180);
+          border-radius: 20px ;
+        }
+        .box{
+          background-color:rgba(146, 145, 159, 0);
+          transition: 0.3s;
+          border-radius: 20px;
+        }
+        .box:hover{
+          background-color:rgb(166, 165, 180);
+          border-radius: 20px ;
+          transform: scale(1.02);
+        }
+        html{
+          overflow-y: hidden;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(146, 145, 159);">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <h2 style="color: #ffffff;" class="playwrite-au-vic ">The Climate Calendar</h2>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search location" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <div class="loc-cell dm-sans"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg> RANCHI, TODAY</div>
+          <div class="cell">
+            <div class="bigcell box dm-sans" style="text-align: center; padding-top: 10px; padding-left: 10px;"><h1 style="text-align: left;" class="dm-sans">34&deg;C</h1><svg xmlns="http://www.w3.org/2000/svg" width="175" height="175" fill="currentColor" class="bi bi-cloud-sun-fill" viewBox="0 0 16 16">
+              <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+              <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708zm1.734 3.374a2 2 0 1 1 3.296 2.198q.3.423.516.898a3 3 0 1 0-4.84-3.225q.529.017 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+            </svg>
+            <br>
+            <br>
+            <h2>PARTIALLY CLOUDY</h2>
+            <br>
+            <h4 style="text-align: left;">MAX TEMP 39&deg;C</h4>
+            <h4 style="text-align: left;">MIN TEMP 27&deg;C</h4>
+            <h4 style="text-align: left;">SUNRISE 5:39 AM</h4>
+            <h4 style="text-align: left;">SUNSET 6:47 PM</h4>
+          </div>
+            <div class="box dm-sans" style="text-align: center; padding-top: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+              <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5m-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2M0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          <br>
+          <br>
+          <h4 style="text-align: center;">WINDSPEED</h4>
+          <h4 style="text-align: center;">8 KM/H</h4>
+        </div>
+            <div class="box dm-sans" style="text-align: center; padding-top: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-moisture" viewBox="0 0 16 16">
+              <path d="M13.5 0a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V7.5h-1.5a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V15h-1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5zM7 1.5l.364-.343a.5.5 0 0 0-.728 0l-.002.002-.006.007-.022.023-.08.088a29 29 0 0 0-1.274 1.517c-.769.983-1.714 2.325-2.385 3.727C2.368 7.564 2 8.682 2 9.733 2 12.614 4.212 15 7 15s5-2.386 5-5.267c0-1.05-.368-2.169-.867-3.212-.671-1.402-1.616-2.744-2.385-3.727a29 29 0 0 0-1.354-1.605l-.022-.023-.006-.007-.002-.001zm0 0-.364-.343zm-.016.766L7 2.247l.016.019c.24.274.572.667.944 1.144.611.781 1.32 1.776 1.901 2.827H4.14c.58-1.051 1.29-2.046 1.9-2.827.373-.477.706-.87.945-1.144zM3 9.733c0-.755.244-1.612.638-2.496h6.724c.395.884.638 1.741.638 2.496C11 12.117 9.182 14 7 14s-4-1.883-4-4.267"/>
+            </svg>
+            <br>
+            <br>
+            <h4 style="text-align: center;">HUMIDITY</h4>
+            <h4 style="text-align: center;">63%</h4>
+          </div>
+            <div class="box dm-sans" style="text-align: center; padding-top: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-umbrella-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .5.5v.514C12.625 1.238 16 4.22 16 8c0 0 0 .5-.5.5-.149 0-.352-.145-.352-.145l-.004-.004-.025-.023a3.5 3.5 0 0 0-.555-.394A3.17 3.17 0 0 0 13 7.5c-.638 0-1.178.213-1.564.434a3.5 3.5 0 0 0-.555.394l-.025.023-.003.003s-.204.146-.353.146-.352-.145-.352-.145l-.004-.004-.025-.023a3.5 3.5 0 0 0-.555-.394 3.3 3.3 0 0 0-1.064-.39V13.5H8h.5v.039l-.005.083a3 3 0 0 1-.298 1.102 2.26 2.26 0 0 1-.763.88C7.06 15.851 6.587 16 6 16s-1.061-.148-1.434-.396a2.26 2.26 0 0 1-.763-.88 3 3 0 0 1-.302-1.185v-.025l-.001-.009v-.003s0-.002.5-.002h-.5V13a.5.5 0 0 1 1 0v.506l.003.044a2 2 0 0 0 .195.726c.095.191.23.367.423.495.19.127.466.229.879.229s.689-.102.879-.229c.193-.128.328-.304.424-.495a2 2 0 0 0 .197-.77V7.544a3.3 3.3 0 0 0-1.064.39 3.5 3.5 0 0 0-.58.417l-.004.004S5.65 8.5 5.5 8.5s-.352-.145-.352-.145l-.004-.004a3.5 3.5 0 0 0-.58-.417A3.17 3.17 0 0 0 3 7.5c-.638 0-1.177.213-1.564.434a3.5 3.5 0 0 0-.58.417l-.004.004S.65 8.5.5 8.5C0 8.5 0 8 0 8c0-3.78 3.375-6.762 7.5-6.986V.5A.5.5 0 0 1 8 0"/>
+            </svg>
+            <br>
+            <br>
+            <h4 style="text-align: center;">PRECIPITATION</h4>
+            <h4 style="text-align: center;">19%</h4></div>
+            <div class="box dm-sans" style="text-align: center; padding-top: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+              <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+            </svg>
+            <br>
+            <br>
+            <h4 style="text-align: center;">MOONRISE</h4>
+            <h4 style="text-align: center;">5:57 PM</h4>
+          </div>
+          </div>
+        <div class="cell2 dm-sans">
+          <div class="weathbox" style="padding-left: 10px; padding-top: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cloud-sun-fill" viewBox="0 0 16 16">
+            <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+            <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708zm1.734 3.374a2 2 0 1 1 3.296 2.198q.3.423.516.898a3 3 0 1 0-4.84-3.225q.529.017 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+          </svg>
+          <h5>TOMORROW: 29&deg;C - 38&deg;C</h5><h5 style='text-align: end; padding-right: 10px;'>PARTIALLY CLOUDY</h5>
+        </div>
+          <div class="weathbox" style="padding-left: 10px; padding-top: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cloud-fog-fill" viewBox="0 0 16 16">
+            <path d="M3 13.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m10.405-9.473a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 12H13a3 3 0 0 0 .405-5.973"/>
+          </svg>
+          <h5>26 JUNE: 31&deg;C - 42&deg;C</h5><h5 style='text-align: end; padding-right: 10px;'>FOGGY</h5>
+        </div>
+          <div class="weathbox" style="padding-left: 10px; padding-top: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cloud-lightning-fill" viewBox="0 0 16 16">
+            <path d="M7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724zm6.352-7.249a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973"/>
+          </svg>
+          <h5>27 JUNE: 28&deg;C - 41&deg;C</h5><h5 style='text-align: end; padding-right: 10px;'>LIGHT SHOWERS</h5>
+        </div>
+          <div class="weathbox" style="padding-left: 10px; padding-top: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cloud-sun-fill" viewBox="0 0 16 16">
+            <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+            <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708zm1.734 3.374a2 2 0 1 1 3.296 2.198q.3.423.516.898a3 3 0 1 0-4.84-3.225q.529.017 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+          </svg>
+          <h5>28 JUNE: 29&deg;C - 39&deg;C</h5><h5 style='text-align: end; padding-right: 10px;'>PARTIALLY CLOUDY</h5>
+        </div>
+        </div>
+      </nav>
+</body>
+</html>
